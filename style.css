@@ -40,6 +40,13 @@ body {
   .auto-type{
     color: midnightblue;
   }
+
+  .top-nav a{
+    float: right;
+    font-size: 20px;
+    margin: 0px 10px;
+  }
+
   
   @media (max-width:680px){
     .logo{
