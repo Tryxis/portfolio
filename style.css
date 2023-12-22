@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     min-height: 95vh;
   }
-  .main {
+  .welcome {
     flex: 1;
   }
   
@@ -41,11 +41,22 @@ body {
     color: midnightblue;
   }
 
+
   .top-nav a{
     float: right;
     font-size: 20px;
     margin: 0px 10px;
+    text-decoration: none;
+    color: midnightblue;
   }
+
+  a:hover{
+    color: rgba(5, 5, 82, 0.582);
+  }
+  a:active{
+    color: rgba(0, 0, 0, 0.803);
+  }
+
 
   
   @media (max-width:680px){
