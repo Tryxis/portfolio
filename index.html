@@ -20,11 +20,11 @@
         <span>
           <a href="">Contact</a>
           <a href="">Projects</a>
-          <a href="">About</a>
+          <a href="#about-section">About</a>
         </span>
       </h2>
-      
     </div>
+
     <h1>Hello, <br /> I am a <br /><span class="auto-type"></span></h1>
     <div class="left card"><img class="tile-image" src="./assets/images/placeholder1.webp" alt="Project Image 1">
       <h2 class="card-title">Project 1</h2>
@@ -39,9 +39,86 @@
       <p>Built by our team of professional developers, we ensure the most rigourous and modern websites. Built from
         scratch using HTML and CSS. Only the best for you.</p>
     </div>
-  </div>
 
-  </div>
+    </div>
+
+    <!-- Start of the "About Me" section -->
+    <div id="about-section">
+        <h2 id="about-heading">About Me</h2>
+        <p id="about-para"> I am currently a full-time Senior Technical Analyst for one of the UK’s largest software companies situated in Newcastle upon Tyne after graduating from Northumbria University with First Class Honours in Computer Science with Games Development. My current role specialises in building and maintaining pseudo-machine learning projects for back-end data automation in a Software as a Service product.</p>
+
+        <!-- Container to keep all 3 drop downs in -->
+        <div id="about-dropdown-container">
+            <!-- Education drop down -->
+            <button type="button" class="collapsible" id="education-button">Education</button>
+            <div class="content">
+                <p>
+                    First Class Honours
+                    <br>
+                    BsC Computer Science with Games Development
+                    <br>
+                    Northumbria University (2020)
+                </p>
+                <p>
+                    D* D* D*
+                    <br>
+                    Games IT
+                    <br>
+                    Carlisle College (2017)
+                </p>
+            </div>
+            
+            <!-- Selected exp dropdown -->
+            <button type="button" class="collapsible" id="selected-exp-button">Selected Experience</button>
+            <div class="content">
+                <h3>
+                    Senior Technical Analyst <br>
+                    Advanced || Newcastle upon Tyne || 2021 - Present 
+                </h3>
+                <ul>
+                    <li>Project management</li>
+                    <li>Project design/development</li>
+                    <li>Delivering time-sensitive code for high profile clients</li>
+                    <li>Developing bespoke solutions to stakeholder;s requirements</li>
+                    <li>Managing outsourced programming teams</li>
+                    <li>Training and mentoring junior staff</li>
+                    <li>Personal development planning</li>
+                    <li>Production of documentation</li>
+                    <li>Continuation of core Technical Analyst responsibilities found below</li>
+                </ul>
+
+                <h3>
+                    Technical Analyst <br>
+                    CloudTrade || Newcastle upon Tyne || 2020 - 2021 
+                </h3>
+                <ul>
+                    <li>Diagnosing and resolving problem code</li>
+                    <li>Idependent production of bespoke code for both new projects and maintenence of production environments</li>
+                    <li>Adhering to strict project timelines and individual SLAs across the client base</li>
+                    <li>Working as part of a team to achieve company goals</li>
+                    <li>Handling client enquires and complaints</li>
+                    <li>Adhering to company coding standards and version control practises</li>
+                    <li>Performing methodical and comprehensive testing</li>
+                    <li>Creation and analysis of reports</li>
+                    <li>Vigilant alert monitoring</li>
+                </ul>
+            </div>
+
+            <!-- Relevant skills dropdown -->
+            <button type="button" class="collapsible" id="relevant-skills-button">Relevant Skills</button>
+            <div class="content">
+                <ul>
+                    <li>Object Oriented Programming (C#, C++, Java)</li>
+                    <li>Web Development (HTML5, CSS, Node.js, Knockout.js, PHP)</li>
+                    <li>Databases (SQL, SSRS)</li>
+                    <li>Prolog</li>
+                    <li>Unreal Engine</li>
+                    <li>Unity</li>
+                    <li>MS office</li>
+                </ul>
+            </div>
+        </div> <!-- End of about-dropdown-container -->
+    </div>  <!-- End of about-section -->
 
   <footer>
     <p>Design. Develop. Create.</p>
@@ -55,6 +132,27 @@
         backSpeed: 100,
         loop: true
     })
+  </script>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) 
+    {
+        coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") 
+        {
+        content.style.display = "none";
+        } 
+        else 
+        {
+        content.style.display = "block";
+        }
+    });
+    }
   </script>
 </body>
 

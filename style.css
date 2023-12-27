@@ -1,3 +1,7 @@
+html { 
+    scroll-behavior: smooth; 
+}
+
 body {
     font-family: "Poppins", sans-serif;
     margin: 50px 50px 0 50px;
@@ -41,7 +45,7 @@ body {
     color: midnightblue;
   }
 
-
+/* Top of page links */
   .top-nav a{
     float: right;
     font-size: 20px;
@@ -55,6 +59,59 @@ body {
   }
   a:active{
     color: rgba(0, 0, 0, 0.803);
+  }
+
+  /* About Me Section onwards */
+
+  #about-section{
+    border: solid black;
+    margin-top: 50px;
+  }
+
+  #about-heading{
+    text-align: justify;
+    text-align: center;
+  }
+  #about-para{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #about-dropdown{
+    display: inline;
+  }
+
+#about-dropdown-container{
+    
+}
+
+.collapsible {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-bottom: solid #f1f1f1;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: midnightblue;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  #relevant-skills-button{
+    border: none;
   }
 
 
