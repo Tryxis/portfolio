@@ -333,6 +333,21 @@ nav .logo {
   color: var(--secondary);
 }
 
+/* Style for the hamburger menu icon */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  cursor: pointer;
+}
+
+.line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--white);
+}
+
 @media (max-width: 768px) {
   .card-grid {
       grid-template-columns: 1fr; /* Display cards in a single column */
@@ -355,4 +370,33 @@ nav .logo {
   padding-top: 2rem; /* Add padding to separate from navigation bar */
   padding-left: 30px;
 }
+
+.links {
+  display: none; /* Hide the navigation links */
+}
+
+.links.active {
+  display: flex; /* Show the navigation links when active */
+  flex-direction: column; /* Stack the links vertically */
+  background-color: var(--bgDark); /* Add background color */
+  padding: 20px; /* Add padding for spacing */
+  position: absolute; /* Position the links */
+  top: 60px; /* Adjust the top position */
+  left: 0; /* Align to the left */
+  width: 100%; /* Occupy full width */
+}
+
+.hamburger-menu {
+  display: flex;
+  margin-right: 1rem; /* Add margin to separate from the contact button */
+}
+
+.navbar {
+  justify-content: space-between; /* Align items to the start and end */
+}
+
+.left {
+  justify-content: flex-start; /* Align items to the start */
+}
+
 }
