@@ -94,6 +94,25 @@ header .navbar {
   color: var(--secondary);
 }
 
+/* Style for the contact link */
+.contact {
+  padding: 0.5rem 2rem; /* Same padding as the button */
+  font-size: rem; /* Same font size as the button */
+  font-weight: 600;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  color: var(--black) !important; /* Text color */
+  background-color: var(--primary); /* Background color */
+  text-decoration: none; /* Ensure no underline for links */
+}
+
+.contact:hover {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary) !important;
+}
+
 .projects-title {
   font-size: 5rem;
   color: var(--white);

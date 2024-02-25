@@ -104,6 +104,34 @@ nav .logo {
   background: var(--white);
 }
 
+/* Make about image responsive */
+.about .left img {
+  max-width: 100%;
+  margin-right: 30px;
+}
+
+/* Move about image slightly to the right */
+.about .left {
+  margin-left: 50px;
+}
+
+/* Hide the about me picture */
+.about .left {
+  display: none;
+}
+
+/* Center the text */
+.about .right {
+  text-align: center;
+}
+
+/* Center the links */
+.about .socials {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Add margin for spacing */
+}
+
 .about h1 {
   margin-bottom: 1rem;
   font-size: 1.6rem;
@@ -265,6 +293,26 @@ nav .logo {
   border-color: var(--primary);
   color: var(--primary);
 }
+
+/* Style for the contact link */
+.contact {
+  padding: 0.5rem 2rem; /* Same padding as the button */
+  font-size: rem; /* Same font size as the button */
+  font-weight: 600;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  color: black; /* Text color */
+  background-color: var(--primary); /* Background color */
+  text-decoration: none; /* Ensure no underline for links */
+}
+
+.contact:hover {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
 
 .flex-1 {
   flex: 1;
