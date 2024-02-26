@@ -75,6 +75,7 @@ nav .logo {
 .hero .right {
   color: var(--white);
   margin-top: -7rem;
+  padding-right: 50px;
 }
 
 .hero .right h6 {
