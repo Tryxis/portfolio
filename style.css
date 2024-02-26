@@ -64,6 +64,7 @@ nav .logo {
   padding: 2rem 0;
   display: flex;
   align-items: center;
+  padding-top: 50px;
 }
 
 .hero .left img {
@@ -349,7 +350,7 @@ nav .logo {
   background-color: var(--white);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .card-grid {
       grid-template-columns: 1fr; /* Display cards in a single column */
       gap: 50px; /* Add some space between cards */
@@ -359,12 +360,22 @@ nav .logo {
       width: 100%; /* Set card width to full width */
   }
 
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+  }
 
   /* Hide hero photo */
   .hero .left {
     display: none;
+    width: 100%; /* Set width to full for both left and right sections */
+    margin-bottom: 2rem; /* Add some space between sections */
 }
 
+.hero .right {
+  width: 100%; /* Set width to full for both left and right sections */
+  margin-bottom: 2rem; /* Add some space between sections */
+}
 /* Move hero text under navigation bar */
 .hero .right {
   margin-top: 0; /* Remove top margin */
