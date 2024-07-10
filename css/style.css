@@ -141,6 +141,9 @@ a {
     .site-navbar.scrolled .navbar-nav > li.active > a {
       color: #bac964 !important; }
 
+.showcase-img{
+  padding-top: 50px;
+}
 .site-hero {
   background-color: #ccc;
   background-size: cover;
