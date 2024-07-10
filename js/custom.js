@@ -166,39 +166,36 @@
 
 
 
-	// Page Nav
 	var clickMenu = function() {
-
-		$('.navbar-nav a:not([class="external"])').click(function(event){
-
-			var section = $(this).data('nav-section'),
-				navbar = $('.navbar-nav');
+		$('.navbar-nav a').click(function(event){
+			var $this = $(this);
+			var section = $this.data('nav-section');
+	
+			if (!$this.hasClass('external')) {
 				if (isMobile.any()) {
 					$('.navbar-toggle').click();
 				}
-				if ( $('[data-section="' + section + '"]').length ) {
-			    	$('html, body').animate({
-			        	scrollTop: $('[data-section="' + section + '"]').offset().top
-			    	}, 500, 'easeInOutExpo');
-			   }
-
-		    event.preventDefault();
-		    return false;
+				if ($('[data-section="' + section + '"]').length) {
+					$('html, body').animate({
+						scrollTop: $('[data-section="' + section + '"]').offset().top
+					}, 500, 'easeInOutExpo');
+				}
+				event.preventDefault();
+			}
 		});
-
-
 	};
-
+	
 	// Reflect scrolling in navigation
 	var navActive = function(section) {
-
 		var $el = $('.navbar-nav');
 		$el.find('li').removeClass('active');
 		$el.each(function(){
 			$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
 		});
-
 	};
+	
+	// Call the function
+	clickMenu();
 
 	var navigationSection = function() {
 
