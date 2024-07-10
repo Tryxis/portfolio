@@ -334,7 +334,7 @@
 		clickMenu();
 		smoothScroll();
 		portfolioMasonry();
-		playAlert();
+		
 	});
 
 	
