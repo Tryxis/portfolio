@@ -314,6 +314,16 @@
 
 	};
 
+	// Function to show alert
+	var showAlert = function() {
+		alert("Web playable version coming soon!");
+	  };
+	
+	  // Bind showAlert to button click
+	  $('#play-me').click(function() {
+		showAlert();
+	  });
+	
 
 	$(function(){
 
@@ -324,6 +334,7 @@
 		clickMenu();
 		smoothScroll();
 		portfolioMasonry();
+		playAlert();
 	});
 
 	
