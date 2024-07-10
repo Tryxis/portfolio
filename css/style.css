@@ -144,6 +144,12 @@ a {
 .showcase-img{
   padding-top: 50px;
 }
+.showcase-heading{
+  padding-top: 50px;
+}
+  @media (max-width: 1000px) {
+    .showcase-heading {
+      padding-top: 0px; } }
 .site-hero {
   background-color: #ccc;
   background-size: cover;
