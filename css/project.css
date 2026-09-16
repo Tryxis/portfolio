@@ -1,0 +1,82 @@
+/* project.css — styles for individual project pages, built on top of style.css */
+
+.skip-link{
+  position:absolute;left:-999px;top:0;
+  background:var(--accent);color:#fff;padding:10px 16px;z-index:200;
+}
+.skip-link:focus{left:16px;top:16px;}
+
+.project-hero{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  padding:130px 0 90px;
+}
+
+.project-hero .project-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:64px;
+  align-items:center;
+}
+@media (max-width:860px){
+  .project-hero .project-grid{grid-template-columns:1fr;gap:40px;}
+  .project-hero{padding:110px 0 70px;}
+}
+
+.project-media{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:#0f1013;
+}
+.project-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.project-back{
+  display:inline-block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px;
+  color:var(--text-faint);
+  margin-bottom:22px;
+}
+.project-back a:hover{color:var(--accent);}
+
+.project-info h1{
+  font-size:clamp(2rem, 4vw, 2.8rem);
+  line-height:1.1;
+}
+
+.project-tagline{
+  margin-top:14px;
+  font-size:1.15rem;
+  color:var(--text-dim);
+}
+
+.project-description{
+  margin-top:22px;
+  color:var(--text-dim);
+  font-size:1rem;
+  line-height:1.7;
+}
+.project-description + .project-description{
+  margin-top:14px;
+}
+
+.project-tags{
+  margin-top:22px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.project-actions{
+  margin-top:34px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}

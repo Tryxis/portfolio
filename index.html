@@ -1,339 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>David Butterworth Portfolio</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/flexslider.css">
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
-
-
+<meta charset="utf-8">
+<title>David Butterworth — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="David Butterworth — software engineer. Games, APIs, and bots.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+<body>
 
+<a href="#section-home" class="skip-link">Skip to content</a>
 
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#section-home" class="nav-brand">david<span class="dot">.</span>butterworth</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#section-home">Home</a></li>
+      <li><a href="#section-portfolio">Work</a></li>
+      <li><a href="#section-resume">CV</a></li>
+      <li><a href="#section-about">About</a></li>
+      <li><a href="#section-contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
 
-	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+<section class="hero" id="section-home">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-kicker">Newcastle upon Tyne, UK <span class="cursor"></span></div>
+      <h1>David Butterworth<br><span>Software Engineer</span></h1>
+      <p class="hero-role">Backend-focused engineer working across .NET and Prolog by day, building small games and bots by night. First-class Computer Science graduate, six years into a career spanning SaaS and iGaming.</p>
+      <div class="hero-actions">
+        <a href="#section-portfolio" class="btn btn-primary">See my work</a>
+        <a href="mailto:david.butterworth1337@gmail.com" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<div class="container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+<section class="section" id="section-portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Featured work</h2>
+      <span class="section-num">6 projects</span>
+    </div>
 
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="game">Game</button>
+      <button class="filter-btn" data-filter="api">API</button>
+      <button class="filter-btn" data-filter="bot">Bot</button>
+    </div>
 
-			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-resume">CV</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+    <div class="project-grid" id="projectGrid">
 
+      <article class="project-card" data-category="game">
+        <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/delivery-davey</span></div>
+        <a href="./projects/delivery_davey.html"><div class="card-media"><img src="images/covers/delivery-davey.svg" alt="Delivery Davey cover art"></div></a>
+        <div class="card-body">
+          <a href="./projects/delivery_davey.html"><h4>Delivery Davey</h4></a>
+          <div class="card-tags"><span class="tag">Game</span></div>
+        </div>
+      </article>
 
+      <article class="project-card" data-category="game">
+        <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/downhill-davey</span></div>
+        <a href="./projects/downhill_davey.html"><div class="card-media"><img src="images/covers/downhill-davey.svg" alt="Downhill Davey cover art"></div></a>
+        <div class="card-body">
+          <a href="./projects/downhill_davey.html"><h4>Downhill Davey</h4></a>
+          <div class="card-tags"><span class="tag">Game</span></div>
+        </div>
+      </article>
 
+      <article class="project-card" data-category="game">
+        <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/the-question</span></div>
+        <a href="./projects/the_question.html"><div class="card-media"><img src="images/covers/the-question.svg" alt="The Question cover art"></div></a>
+        <div class="card-body">
+          <a href="./projects/the_question.html"><h4>The Question</h4></a>
+          <div class="card-tags"><span class="tag">Game</span></div>
+        </div>
+      </article>
 
-	<section class="site-hero" style="background-image: url(images/David1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row intro-text align-items-center justify-content-center">
-				<div class="col-md-10 text-center pt-5">
+      <article class="project-card" data-category="api">
+        <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/stock-flock</span></div>
+        <a href="./projects/stock_flock.html"><div class="card-media"><img src="images/covers/stock-flock.svg" alt="Stock Flock cover art"></div></a>
+        <div class="card-body">
+          <a href="./projects/stock_flock.html"><h4>Stock Flock</h4></a>
+          <div class="card-tags"><span class="tag">API</span></div>
+        </div>
+      </article>
 
-					<h1 class="site-heading site-animate">Hello, I'm <strong class="d-block">David Butterworth</strong></h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is my portfolio</strong>
+      <article class="project-card" data-category="api">
+        <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/zoom-and-broom</span></div>
+        <a href="./projects/zoom_and_broom.html"><div class="card-media"><img src="images/covers/zoom-and-broom.svg" alt="Zoom and Broom cover art"></div></a>
+        <div class="card-body">
+          <a href="./projects/zoom_and_broom.html"><h4>Zoom and Broom</h4></a>
+          <div class="card-tags"><span class="tag">API</span><span class="tag-status">In progress</span></div>
+        </div>
+      </article>
 
-				</div>
-			</div>
-		</div>
-	</section> <!-- section -->
+      <article class="project-card" data-category="bot">
+        <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/dungeon-helper</span></div>
+        <a href="./projects/dungeon_helper.html"><div class="card-media"><img src="images/covers/dungeon-helper.svg" alt="Dungeon Helper cover art"></div></a>
+        <div class="card-body">
+          <a href="./projects/dungeon_helper.html"><h4>Davey's Dungeon Helper</h4></a>
+          <div class="card-tags"><span class="tag">Bot</span></div>
+        </div>
+      </article>
 
+    </div>
+  </div>
+</section>
 
+<section class="section" id="section-resume">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>CV</h2>
+      <a href="./assets/David Butterworth CV 2026.pdf" download="david_butterworth_cv" class="btn btn-ghost" style="padding:8px 16px;font-size:13px;">Download PDF</a>
+    </div>
 
-	<section class="site-section" id="section-portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="section-heading text-center col-md-12">
-					<h2>Featured <strong>Portfolio</strong></h2>
-				</div>
-			</div>
-			<div class="filters">
-				<ul>
-					<li class="active" data-filter="*">All</li>
-					<li data-filter=".game">Game</li>
-					<li data-filter=".api">API</li>
-					<li data-filter=".bot">Bot</li>
-				</ul>
-			</div>
+    <div class="cv-grid">
+      <div class="cv-col">
+        <h3>Education</h3>
+        <div class="cv-item">
+          <span class="cv-date">September 2017 — June 2020</span>
+          <h4>Computer Science with Games Development</h4>
+          <p>BSc, First Class Honours</p>
+          <span class="org">Northumbria University</span>
+        </div>
+      </div>
 
-			<div class="filters-content">
-				<div class="row grid">
+      <div class="cv-col">
+        <h3>Experience</h3>
+        <div class="cv-item">
+          <span class="cv-date">February 2025 — Present</span>
+          <h4>Software Engineer</h4>
+          <p>Backend .NET development of casino integration platforms.</p>
+          <span class="org">Strive Gaming</span>
+        </div>
+        <div class="cv-item">
+          <span class="cv-date">September 2021 — February 2025</span>
+          <h4>Senior Technical Developer</h4>
+          <p>Technical team lead for new business projects on a Prolog stack, plus internal product development using .NET.</p>
+          <span class="org">CloudTrade / Advanced</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-					<div class="single-portfolio col-sm-4 all game">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<a href="./projects/delivery_davey.html">
-									<img class="image img-fluid" src="images/console-controller-png.png" alt="Image of a console controller">
-								</a>
-							</div>                             
-						</div>
-						<div class="p-inner">
-							<a href="./projects/delivery_davey.html"><h4>Delivery Davey</h4></a>
-							<div class="cat">Game</div>
-						</div>                                         
-					</div>
+<section class="section" id="section-about">
+  <div class="wrap">
+    <div class="section-head"><h2>About</h2></div>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="images/David1.jpg" alt="Portrait of David Butterworth">
+      </div>
+      <div>
+        <p class="about-lead">Highly motivated technology professional with a passion for learning and self-development.</p>
+        <p class="about-body">Six years of tech experience across SaaS and iGaming, and a hobbyist game developer on the side. When I'm not working, you'll usually find me enjoying a good comic or painting Warhammer.</p>
+        <div class="about-actions">
+          <a href="mailto:david.butterworth1337@gmail.com" class="btn btn-primary">Hire me</a>
+          <a href="./assets/David Butterworth CV 2026.pdf" download="david_butterworth_cv" class="btn btn-ghost">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-					<div class="single-portfolio col-sm-4 all game">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<a href="./projects/downhill_davey.html">
-									<img class="image img-fluid" src="images/console-controller-png.png" alt="Image of a console controller">
-								</a>
-							</div>                                
-						</div>
-						<div class="p-inner">
-							<a href="./projects/downhill_davey.html"><h4>Downhill Davey</h4></a>
-							<div class="cat">Game</div>
-						</div>                                         
-					</div>         
+<section class="section" id="section-contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <h2>Get in touch</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="label">Email</span>
+          <a href="mailto:david.butterworth1337@gmail.com">david.butterworth1337@gmail.com</a>
+        </li>
+        <li>
+          <span class="label">Location</span>
+          <span class="value">Newcastle Upon Tyne, United Kingdom</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-					<div class="single-portfolio col-sm-4 all game">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<a href="./projects/the_question.html">
-									<img class="image img-fluid" src="images/console-controller-png.png" alt="Image of a console controller">
-								</a>
-							</div>
-						</div>
-						<div class="p-inner">
-							<a href="./projects/the_question.html"><h4>The Question</h4></a>
-							<div class="cat">Game</div>
-						</div>
-					</div>
+<footer>
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 David Butterworth</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/david-butterworth-5b9950203/">LinkedIn</a>
+      <a href="https://github.com/Tryxis">GitHub</a>
+    </div>
+  </div>
+</footer>
 
-					<div class="single-portfolio col-sm-4 all api">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-									<a href="./projects/stock_flock.html">
-										<img class="image img-fluid" src="images/pc_png.png" alt="Image of a PC">
-									</a>
-							</div>                              
-						</div> 
-						<div class="p-inner">
-							<a href="./projects/stock_flock.html"><h4>Stock Flock</h4></a>
-							<div class="cat">API</div>
-						</div>
-					</div>
+<script src="js/main.js" defer></script>
 
-					<div class="single-portfolio col-sm-4 all api">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-									<a href="./projects/zoom_and_broom.html">
-										<img class="image img-fluid" src="images/pc_png.png" alt="Image of a PC">
-									</a>
-							</div>                              
-						</div> 
-						<div class="p-inner">
-							<a href="./projects/zoom_and_broom.html"><h4>Zoom and Broom</h4></a>
-							<div class="cat">API</div>
-							<small>In progress</small>
-						</div>
-					</div>
+<!-- 100% privacy-first analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
-					<div class="single-portfolio col-sm-4 all bot">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-									<a href="./projects/dungeon_helper.html">
-										<img class="image img-fluid" src="images/robot-antennas.png" alt="Image of a PC">
-									</a>
-							</div>                              
-						</div> 
-						<div class="p-inner">
-							<a href="./projects/zoom_and_broom.html"><h4>Davey's Dungeon Helper</h4></a>
-							<div class="cat">Bot</div>
-							<!-- <small>In progress</small> -->
-						</div>
-					</div>
-
-					
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- .section -->
-
-	
-	<section class="site-section " id="section-resume">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>My <strong>CV</strong></h2>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<h2 class="mb-5">Education</h2>
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> September 2017 - June 2020</span>
-						<h3>Computer Science with Games Development</h3>
-						<p>BSc with First Class Honours</p>
-						<span class="school">Northumbria University</span>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<h2 class="mb-5">Selected Experience</h2>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> February 2025 - Present</span>
-						<h3>Software Engineer</h3>
-						<p>Software engineer primarily focused on backend .NET development of casino integration platforms.</p>
-						<span class="school">Strive Gaming</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> September 2021 - February 2025</span>
-						<h3>Senior Technical Developer</h3>
-						<p>Senior engineer and technical team lead for new business projects using a Prolog tech stack. Internal product development using .NET.</p>
-						<span class="school">CloudTrade / Advanced</span>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section> <!-- .section -->
-
-	<section class="site-section" id="section-about">
-		<div class="container">
-			<div class="row mb-5 align-items-center">
-				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="images/David1.jpg" alt="Image placeholder" class="img-fluid">
-				</div>
-				<div class="col-lg-5 pl-lg-5">
-					<div class="section-heading">
-						<h2>About <strong>Me</strong></h2>
-					</div>
-					<p class="lead">Highly motivated technology professional with a passion for learning and self-development.</p>
-					<p class="mb-5  ">Six years tech experience across SaaS and igaming, and a hobbyist game developer. When I'm not working, you may find me enjoying a good comic or painting Warhammer.</p>
-
-					<p>
-						<a href="mailto: david.butterworth1337@gmail.com" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
-						<a href="./assets/David Butterworth CV 2026.pdf" download="david_butterworth_cv" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
-					</p>
-				</div>
-			</div>
-
-
-		</div>
-	</section>
-
-
-	<section class="site-section" id="section-contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Get <strong>In Touch</strong></h2>
-					</div>
-				</div>
-
-				<!-- <div class="col-md-7 mb-5 mb-md-0">
-					<form action="" class="site-form">
-						<h3 class="mb-5">Get In Touch</h3>
-						<div class="form-group">
-							<input type="text" class="form-control px-3 py-4" placeholder="Your Name">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Email">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Phone">
-						</div>
-						<div class="form-group mb-5">
-							<textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
-						</div>
-					</form>
-				</div> -->
-				<div class="col-md-5 pl-md-5">
-					<h3 class="mb-5">My Contact Details</h3>
-					<ul class="site-contact-details">
-						<li>
-							<span class="text-uppercase">Email</span>
-							david.butterworth1337@gmail.com
-						</li>
-						<!-- <li>
-							<span class="text-uppercase">Phone</span>
-							0123456789
-						</li> -->
-						<li>
-							<span class="text-uppercase">Location</span>
-							Newcastle Upon Tyne <br>
-							United Kingdom
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<footer class="site-footer">
-		<div class="container">
-
-			<div class="row mb-5">
-				<div class="col-md-12 text-center">
-					<p>
-						<!-- <a href="#" class="social-item"><span class="icon-facebook2"></span></a>
-						<a href="#" class="social-item"><span class="icon-twitter"></span></a>
-						<a href="#" class="social-item"><span class="icon-instagram2"></span></a> -->
-						<a href="https://www.linkedin.com/in/david-butterworth-5b9950203/" class="social-item"><span class="icon-linkedin2"></span></a>
-						<a href="https://github.com/Tryxis" class="social-item"><span class="icon-github2"></span></a>
-					</p>
-				</div>
-			</div>
-			
-		</div>
-	</footer>
-
-
-
-
-	<script src="js/vendor/jquery.min.js"></script>
-	<script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/vendor/popper.min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-
-	<script src="js/vendor/jquery.easing.1.3.js"></script>
-
-	<script src="js/vendor/jquery.stellar.min.js"></script>
-	<script src="js/vendor/jquery.waypoints.min.js"></script>
-
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-	<script src="js/custom.js"></script>
-
-	<!-- Google Map -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    	<script src="js/google-map.js"></script> -->
-	<!-- 100% privacy-first analytics -->
-
-	<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-	<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-    </body>
-    </html>
+</body>
+</html>
