@@ -47,11 +47,12 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Featured work</h2>
-      <span class="section-num" id="projectCount">8 projects</span>
+      <span class="section-num" id="projectCount">3 projects</span>
     </div>
 
     <div class="filters" id="filters" role="group" aria-label="Filter projects by type">
-      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn active" data-filter="featured" aria-pressed="true">Featured</button>
+      <button class="filter-btn" data-filter="all" aria-pressed="false">All</button>
       <button class="filter-btn" data-filter="game" aria-pressed="false">Game</button>
       <button class="filter-btn" data-filter="app" aria-pressed="false">App</button>
       <button class="filter-btn" data-filter="site" aria-pressed="false">Site</button>
@@ -61,10 +62,10 @@
 
     <div class="project-grid" id="projectGrid">
 
-      <article class="project-card" data-category="site">
+      <article class="project-card" data-category="site" data-featured>
         <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/bones-and-bolters</span></div>
         <a class="card-media-link" href="./projects/bones_and_bolters.html" tabindex="-1" aria-hidden="true">
-          <div class="card-media"><img src="images/covers/bones-and-bolters.png" alt="" width="400" height="250" loading="lazy" decoding="async"></div>
+          <div class="card-media"><img src="images/covers/bones-and-bolters.svg" alt="" width="400" height="250" loading="lazy" decoding="async"></div>
         </a>
         <div class="card-body">
           <h4><a href="./projects/bones_and_bolters.html">Bones and Bolters</a></h4>
@@ -80,10 +81,10 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="app">
+      <article class="project-card" data-category="app" data-featured>
         <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/reckoner</span></div>
         <a class="card-media-link" href="./projects/reckoner.html" tabindex="-1" aria-hidden="true">
-          <div class="card-media"><img src="images/covers/reckoner.png" alt="" width="400" height="250" loading="lazy" decoding="async"></div>
+          <div class="card-media"><img src="images/covers/reckoner.svg" alt="" width="400" height="250" loading="lazy" decoding="async"></div>
         </a>
         <div class="card-body">
           <h4><a href="./projects/reckoner.html">Reckoner</a></h4>
@@ -99,7 +100,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="bot">
+      <article class="project-card" data-category="bot" data-featured>
         <div class="card-chrome"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="path">~/projects/dungeon-helper</span></div>
         <a class="card-media-link" href="./projects/dungeon_helper.html" tabindex="-1" aria-hidden="true">
           <div class="card-media"><img src="images/covers/dungeon-helper.svg" alt="" width="400" height="250" loading="lazy" decoding="async"></div>
@@ -235,7 +236,13 @@
       <div class="cv-col">
         <h3>Experience</h3>
         <div class="cv-item">
-          <span class="cv-date">February 2025 — Present</span>
+          <span class="cv-date">July 2026 — Present</span>
+          <h4>Full Stack Developer</h4>
+          <p>Software consultancy: full-stack delivery of client platforms on Laravel and WordPress.</p>
+          <span class="org">Zaltek Digital</span>
+        </div>
+        <div class="cv-item">
+          <span class="cv-date">February 2025 — June 2026</span>
           <h4>Software Engineer</h4>
           <p>Backend .NET development of casino integration platforms.</p>
           <span class="org">Strive Gaming</span>

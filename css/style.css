@@ -259,6 +259,28 @@
     transform:translateY(-3px);
   }
   .project-card.is-hidden{display:none;}
+
+  /* Filtering: the whole grid dips out, the new set fades back in staggered,
+     rather than cards vanishing and appearing in one hard frame.
+     The 160ms here is mirrored by FADE_MS in js/main.js. */
+  .project-grid.is-filtering .project-card{
+    opacity:0;
+    transform:translateY(8px);
+    pointer-events:none;
+    transition:opacity .16s ease, transform .16s ease;
+  }
+  .project-card.is-entering{
+    animation:cardIn .3s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes cardIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:none;}
+  }
+  /* The count changing is the other half of the feedback, so soften it too.
+     Toggled from JS — the count sits before the grid, and CSS has no
+     previous-sibling selector. */
+  .section-num{transition:opacity .16s ease;}
+  .section-num.is-updating{opacity:.35;}
   .card-chrome{
     display:flex;
     align-items:center;
@@ -486,6 +508,8 @@
     .hero-kicker .cursor{animation:none;}
     .project-card{transition:border-color .2s ease;}
     .project-card:hover{transform:none;}
+    .project-card.is-entering{animation:none;}
+    .project-grid.is-filtering .project-card{opacity:1;transform:none;}
   }
 
   a:focus-visible, button:focus-visible{

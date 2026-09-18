@@ -130,8 +130,8 @@ PROJECTS = [
     dict(
         slug="bones_and_bolters",
         title="Bones and Bolters",
-        cover="bones-and-bolters.png",
-        alt="The Bones and Bolters site, showing the crowned skull crest above the club name",
+        cover="bones-and-bolters.svg",
+        alt="Bones and Bolters cover art",
         tagline="Club site for a Kill Team group",
         meta="Bones and Bolters — a static club site for a local Kill Team group, with a crew roster and a filterable campaign calendar.",
         tags=['<span class="tag">Site</span>'],
@@ -169,9 +169,8 @@ PROJECTS = [
     dict(
         slug="reckoner",
         title="Reckoner",
-        cover="reckoner.png",
-        alt="The Reckoner calculator in dark mode, showing weapon and target inputs beside the calculated results",
-        hero="reckoner-wide.png",
+        cover="reckoner.svg",
+        alt="Reckoner cover art",
         tagline="Attack-sequence probability calculator",
         meta="Reckoner — an offline-capable attack sequence probability calculator for tabletop wargames, installable as a phone app.",
         tags=['<span class="tag">App</span>'],
