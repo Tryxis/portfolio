@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The Question — David Butterworth</title>
+<title>The Question &mdash; David Butterworth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="The Question — Interface-based quiz game.">
+<meta name="description" content="The Question — a Unity pop culture quiz built so that new questions are authored as data rather than code.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Question — David Butterworth">
+<meta property="og:description" content="The Question — a Unity pop culture quiz built so that new questions are authored as data rather than code.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/the-question.svg">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/the_question.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
 </head>
@@ -20,19 +27,19 @@
     <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#section-portfolio">Portfolio</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
       <li><a href="../index.html#section-resume">CV</a></li>
       <li><a href="../index.html#section-about">About</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
 <main id="project-main" class="project-hero">
   <div class="wrap project-grid">
     <div class="project-media">
-      <img src="../images/covers/the-question.svg" alt="The Question cover art">
+      <img src="../images/covers/the-question.svg" alt="The Question cover art" width="1400" height="875">
     </div>
     <div class="project-info">
       <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
@@ -43,12 +50,39 @@
         <span class="tag">Game</span>
       </div>
       <div class="project-actions">
-        <a href="https://tryxis.itch.io/the-question" class="btn btn-primary" target="_blank" rel="noopener">Play Me</a>
-        <a href="https://github.com/Tryxis/the-question" class="btn btn-ghost" target="_blank" rel="noopener">View Repo</a>
+        <a href="https://tryxis.itch.io/the-question" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Play Me for The Question (opens in a new tab)">Play Me</a>
+        <a href="https://github.com/Tryxis/the-question" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for The Question (opens in a new tab)">View Repo</a>
       </div>
     </div>
   </div>
 </main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>Questions are data, not code</h3>
+        <p>Each question is a Unity ScriptableObject holding the prompt, four answers and the index of the right one. Writing a new round is filling in assets in the editor &mdash; no programmer needed, and no rebuild to change a typo in an answer.</p>
+        <h3>One state machine drives the round</h3>
+        <p>The quiz script owns the whole cycle: draw a random unasked question, run the timer, lock the buttons on an answer, reveal the correct one, advance the progress bar, and hand over to the end screen when the pool runs dry.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Engine</dt><dd>Unity</dd>
+          <dt>Language</dt><dd>C#</dd>
+          <dt>Published</dt><dd>itch.io</dd>
+          <dt>Status</dt><dd>Prototype, playable</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./downhill_davey.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Downhill Davey</span></a>
+      <a class="pager-next" href="./stock_flock.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Stock Flock</span></a>
+    </nav>
+  </div>
+</section>
 
 <footer>
   <div class="wrap footer-inner">

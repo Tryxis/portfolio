@@ -1,0 +1,41 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bones and Bolters cover art">
+  <defs>
+    <pattern id="grid-bnb" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#20232a"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="250" fill="#0f1013"/>
+  <rect width="400" height="250" fill="url(#grid-bnb)"/>
+
+  <!-- crown -->
+  <g stroke="#e9e6e0" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M148 108 L148 74 L167 92 L186 62 L205 92 L224 74 L224 108 Z"/>
+    <line x1="144" y1="116" x2="228" y2="116"/>
+  </g>
+  <circle cx="186" cy="58" r="4" fill="#c4453a"/>
+
+  <!-- crossed measuring tape and ruler, abstracted to two bars -->
+  <g stroke="#3a3f47" stroke-width="2" stroke-linecap="round">
+    <line x1="120" y1="196" x2="280" y2="196"/>
+    <line x1="140" y1="190" x2="140" y2="202"/>
+    <line x1="180" y1="190" x2="180" y2="202"/>
+    <line x1="220" y1="190" x2="220" y2="202"/>
+    <line x1="260" y1="190" x2="260" y2="202"/>
+  </g>
+
+  <!-- two dice -->
+  <g stroke="#e9e6e0" stroke-width="2" fill="none">
+    <rect x="150" y="136" width="40" height="40" rx="6"/>
+    <rect x="212" y="136" width="40" height="40" rx="6"/>
+  </g>
+  <g fill="#c4453a">
+    <circle cx="163" cy="149" r="3"/>
+    <circle cx="177" cy="163" r="3"/>
+    <circle cx="225" cy="149" r="3"/>
+    <circle cx="239" cy="149" r="3"/>
+    <circle cx="225" cy="163" r="3"/>
+    <circle cx="239" cy="163" r="3"/>
+  </g>
+
+  <text x="200" y="228" text-anchor="middle" font-family="monospace" font-size="13" fill="#5f636b" letter-spacing="3">KILL TEAM</text>
+</svg>

@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Downhill Davey — David Butterworth</title>
+<title>Downhill Davey &mdash; David Butterworth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Downhill Davey — Small platform prototype.">
+<meta name="description" content="Downhill Davey — a small Unity physics game about flipping and tricking your way down a mountain.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Downhill Davey — David Butterworth">
+<meta property="og:description" content="Downhill Davey — a small Unity physics game about flipping and tricking your way down a mountain.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/downhill-davey.svg">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/downhill_davey.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
 </head>
@@ -20,19 +27,19 @@
     <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#section-portfolio">Portfolio</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
       <li><a href="../index.html#section-resume">CV</a></li>
       <li><a href="../index.html#section-about">About</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
 <main id="project-main" class="project-hero">
   <div class="wrap project-grid">
     <div class="project-media">
-      <img src="../images/covers/downhill-davey.svg" alt="Downhill Davey cover art">
+      <img src="../images/covers/downhill-davey.svg" alt="Downhill Davey cover art" width="1400" height="875">
     </div>
     <div class="project-info">
       <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
@@ -43,12 +50,39 @@
         <span class="tag">Game</span>
       </div>
       <div class="project-actions">
-        <a href="https://tryxis.itch.io/downhill-davey" class="btn btn-primary" target="_blank" rel="noopener">Play Me</a>
-        <a href="https://github.com/Tryxis/downhill-davey" class="btn btn-ghost" target="_blank" rel="noopener">View Repo</a>
+        <a href="https://tryxis.itch.io/downhill-davey" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Play Me for Downhill Davey (opens in a new tab)">Play Me</a>
+        <a href="https://github.com/Tryxis/downhill-davey" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Downhill Davey (opens in a new tab)">View Repo</a>
       </div>
     </div>
   </div>
 </main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>Physics does the animating</h3>
+        <p>The rider is a 2D rigidbody. Steering applies torque rather than setting a rotation, so landings, wipeouts and the satisfying wobble at the top of a jump all fall out of the physics rather than being hand-animated.</p>
+        <h3>A crash rule you can feel</h3>
+        <p>A separate collider on the head turns a bad landing into an instant restart. Making the failure condition a body part rather than a health bar means players learn it in one go.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Engine</dt><dd>Unity (2D physics)</dd>
+          <dt>Language</dt><dd>C#</dd>
+          <dt>Published</dt><dd>itch.io</dd>
+          <dt>Status</dt><dd>Prototype, playable</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./delivery_davey.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Delivery Davey</span></a>
+      <a class="pager-next" href="./the_question.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">The Question</span></a>
+    </nav>
+  </div>
+</section>
 
 <footer>
   <div class="wrap footer-inner">

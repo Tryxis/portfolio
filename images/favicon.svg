@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="db">
+  <rect width="64" height="64" rx="10" fill="#0a0b0d"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="9" fill="none" stroke="#262a31" stroke-width="3"/>
+  <text x="14" y="43" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="30" font-weight="600" fill="#e9e6e0">d</text>
+  <circle cx="35" cy="40" r="4" fill="#c4453a"/>
+  <text x="41" y="43" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="30" font-weight="600" fill="#e9e6e0">b</text>
+</svg>

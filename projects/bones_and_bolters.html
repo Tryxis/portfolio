@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bones and Bolters &mdash; David Butterworth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Bones and Bolters — a static club site for a local Kill Team group, with a crew roster and a filterable campaign calendar.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bones and Bolters — David Butterworth">
+<meta property="og:description" content="Bones and Bolters — a static club site for a local Kill Team group, with a crew roster and a filterable campaign calendar.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/bones-and-bolters.png">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/bones_and_bolters.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+<a href="#project-main" class="skip-link">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
+      <li><a href="../index.html#section-resume">CV</a></li>
+      <li><a href="../index.html#section-about">About</a></li>
+      <li><a href="../index.html#section-contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</nav>
+
+<main id="project-main" class="project-hero">
+  <div class="wrap project-grid">
+    <div class="project-media">
+      <img src="../images/covers/bones-and-bolters.png" alt="The Bones and Bolters site, showing the crowned skull crest above the club name" width="1400" height="875">
+    </div>
+    <div class="project-info">
+      <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
+      <h1>Bones and Bolters</h1>
+      <p class="project-tagline">Club site for a Kill Team group</p>
+      <p class="project-description">A home on the web for a local Kill Team group: who runs it, and what is coming up. The crew roster introduces the people you will actually meet across the table, and the campaign calendar lists game nights and tournaments so nobody has to scroll back through a chat thread to find a date.</p>
+      <p class="project-description">Built and hosted by me for the group, and deliberately kept to plain HTML, CSS and JavaScript so anyone can open the file and change a date without installing anything.</p>
+      <div class="project-tags">
+        <span class="tag">Site</span>
+      </div>
+      <div class="project-actions">
+        <a href="https://tryxis.github.io/bones-and-bolters/" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Live site for Bones and Bolters (opens in a new tab)">Live site</a>
+        <a href="https://github.com/Tryxis/Bones-and-Bolters" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Bones and Bolters (opens in a new tab)">View Repo</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>No framework, no build step</h3>
+        <p>Three files &mdash; one HTML, one stylesheet, one script. The whole thing is served straight from GitHub Pages. For a site that changes when someone adds an event, a build pipeline would be a tax on every edit and would give nothing back.</p>
+        <h3>A carousel without a carousel library</h3>
+        <p>The crew roster is a horizontally scrollable row with dot indicators. The dots are generated from whatever members exist in the markup, and the active one is worked out from scroll position on each frame, throttled through <code>requestAnimationFrame</code>. Adding a new member means adding one block of HTML &mdash; the navigation follows on its own.</p>
+        <h3>Calendar that filters in place</h3>
+        <p>Events carry a <code>data-type</code> of casual or tournament and the filter buttons toggle visibility against it. Same idea as the filters on this portfolio, which is where it came from.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Stack</dt><dd>HTML, CSS, vanilla JavaScript</dd>
+          <dt>Hosting</dt><dd>GitHub Pages</dd>
+          <dt>Role</dt><dd>Built it and keep it running</dd>
+          <dt>Status</dt><dd>Live</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./zoom_and_broom.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Zoom and Broom</span></a>
+      <a class="pager-next" href="./reckoner.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Reckoner</span></a>
+    </nav>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 David Butterworth</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/david-butterworth-5b9950203/">LinkedIn</a>
+      <a href="https://github.com/Tryxis">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+
+<!-- 100% privacy-first analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+</body>
+</html>

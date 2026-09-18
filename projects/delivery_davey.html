@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Delivery Davey — David Butterworth</title>
+<title>Delivery Davey &mdash; David Butterworth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Delivery Davey — Small driving and delivery prototype.">
+<meta name="description" content="Delivery Davey — a small Unity driving prototype where parcels buy you speed and crashes take it away.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Delivery Davey — David Butterworth">
+<meta property="og:description" content="Delivery Davey — a small Unity driving prototype where parcels buy you speed and crashes take it away.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/delivery-davey.svg">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/delivery_davey.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
 </head>
@@ -20,19 +27,19 @@
     <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#section-portfolio">Portfolio</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
       <li><a href="../index.html#section-resume">CV</a></li>
       <li><a href="../index.html#section-about">About</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
 <main id="project-main" class="project-hero">
   <div class="wrap project-grid">
     <div class="project-media">
-      <img src="../images/covers/delivery-davey.svg" alt="Delivery Davey cover art">
+      <img src="../images/covers/delivery-davey.svg" alt="Delivery Davey cover art" width="1400" height="875">
     </div>
     <div class="project-info">
       <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
@@ -43,12 +50,39 @@
         <span class="tag">Game</span>
       </div>
       <div class="project-actions">
-        <a href="https://tryxis.itch.io/delivery-davey" class="btn btn-primary" target="_blank" rel="noopener">Play Me</a>
-        <a href="https://github.com/Tryxis/delivery-davey" class="btn btn-ghost" target="_blank" rel="noopener">View Repo</a>
+        <a href="https://tryxis.itch.io/delivery-davey" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Play Me for Delivery Davey (opens in a new tab)">Play Me</a>
+        <a href="https://github.com/Tryxis/delivery-davey" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Delivery Davey (opens in a new tab)">View Repo</a>
       </div>
     </div>
   </div>
 </main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>The risk/reward loop is the whole game</h3>
+        <p>Speed is the score and the hazard at once. Collecting a package boosts you; clipping the scenery drops you back down. One tuned number in each direction is enough to make a player decide whether that shortcut is worth it, which is more interesting than a timer.</p>
+        <h3>Kept deliberately small</h3>
+        <p>Three scripts: one drives the car, one handles pickup and drop-off triggers, one follows the camera. Every tuning value is exposed in the Unity inspector, so balancing the thing is done by playing it rather than by recompiling.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Engine</dt><dd>Unity (2D)</dd>
+          <dt>Language</dt><dd>C#</dd>
+          <dt>Published</dt><dd>itch.io</dd>
+          <dt>Status</dt><dd>Prototype, playable</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./dungeon_helper.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Davey&#8217;s Dungeon Helper</span></a>
+      <a class="pager-next" href="./downhill_davey.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Downhill Davey</span></a>
+    </nav>
+  </div>
+</section>
 
 <footer>
   <div class="wrap footer-inner">

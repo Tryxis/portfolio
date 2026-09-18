@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Stock Flock — David Butterworth</title>
+<title>Stock Flock &mdash; David Butterworth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Stock Flock — .NET stocks and shares social platform.">
+<meta name="description" content="Stock Flock — a .NET Web API backing a social platform for share portfolios, with Identity, JWT auth and EF Core.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stock Flock — David Butterworth">
+<meta property="og:description" content="Stock Flock — a .NET Web API backing a social platform for share portfolios, with Identity, JWT auth and EF Core.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/stock-flock.svg">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/stock_flock.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
 </head>
@@ -20,34 +27,63 @@
     <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#section-portfolio">Portfolio</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
       <li><a href="../index.html#section-resume">CV</a></li>
       <li><a href="../index.html#section-about">About</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
 <main id="project-main" class="project-hero">
   <div class="wrap project-grid">
     <div class="project-media">
-      <img src="../images/covers/stock-flock.svg" alt="Stock Flock cover art">
+      <img src="../images/covers/stock-flock.svg" alt="Stock Flock cover art" width="1400" height="875">
     </div>
     <div class="project-info">
       <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
       <h1>Stock Flock</h1>
       <p class="project-tagline">.NET stocks and shares social platform</p>
-      <p class="project-description">Backend endpoints to facilitate a social media style application to display stock portfolios. Currently operates with a local SQL server database, with authorisation handled via JWT.</p>
+      <p class="project-description">Backend endpoints to facilitate a social media style application to display stock portfolios. Operates against a SQL Server database, with authorisation handled via JWT.</p>
       <div class="project-tags">
         <span class="tag">API</span>
       </div>
       <div class="project-actions">
-        <a href="https://github.com/Tryxis/StocksApi" class="btn btn-ghost" target="_blank" rel="noopener">View Repo</a>
+        <a href="https://github.com/Tryxis/StocksApi" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Stock Flock (opens in a new tab)">View Repo</a>
       </div>
     </div>
   </div>
 </main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>Conventional layering, on purpose</h3>
+        <p>Controllers for accounts, stocks, portfolios and comments sit on top of repositories, with DTOs at the boundary so the EF entities never leak out of the API. It is the standard shape for a reason: anyone who has worked in a .NET codebase can find their way around it on the first read.</p>
+        <h3>Identity and tokens</h3>
+        <p>ASP.NET Core Identity handles users and password rules; a token service issues JWTs and the API validates them as bearer tokens. Claims extensions keep &#8220;who is this request&#8221; out of the controllers.</p>
+        <h3>Prices come from outside</h3>
+        <p>A dedicated service calls an external market data provider and maps the response onto the internal stock model, so a change of data supplier touches one class rather than every controller.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Stack</dt><dd>.NET Web API, EF Core, SQL Server</dd>
+          <dt>Auth</dt><dd>ASP.NET Identity + JWT bearer</dd>
+          <dt>Docs</dt><dd>Swagger / OpenAPI</dd>
+          <dt>Status</dt><dd>Backend complete</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./the_question.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">The Question</span></a>
+      <a class="pager-next" href="./zoom_and_broom.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Zoom and Broom</span></a>
+    </nav>
+  </div>
+</section>
 
 <footer>
   <div class="wrap footer-inner">

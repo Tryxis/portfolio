@@ -80,3 +80,119 @@
   gap:14px;
   flex-wrap:wrap;
 }
+/* The hero used to be the whole page. Now there's content below it, so it
+   stops just short of a full viewport — enough that the next section peeks
+   over the fold and people know to scroll. */
+.project-hero{min-height:88svh;}
+
+/* ---- build notes ---- */
+.project-notes{
+  padding:90px 0 110px;
+}
+.notes-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:64px;
+  align-items:start;
+}
+@media (max-width:860px){
+  .notes-grid{grid-template-columns:1fr;gap:40px;}
+  .project-notes{padding:70px 0 80px;}
+}
+
+.notes-main h2{
+  font-size:clamp(1.5rem, 3vw, 1.9rem);
+  margin-bottom:12px;
+}
+.notes-main h3{
+  font-size:1.02rem;
+  margin-top:34px;
+  color:var(--text);
+}
+.notes-main h3::before{
+  content:"// ";
+  font-family:'IBM Plex Mono', monospace;
+  color:var(--accent);
+  font-weight:400;
+}
+.notes-main p{
+  margin-top:10px;
+  color:var(--text-dim);
+  line-height:1.75;
+  max-width:62ch;
+}
+.notes-main code{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.86em;
+  color:var(--text);
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1px 5px;
+}
+
+.notes-meta{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--surface);
+  padding:24px 24px 26px;
+  position:sticky;
+  top:96px;
+}
+@media (max-width:860px){ .notes-meta{position:static;} }
+
+.notes-meta dl{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+}
+.notes-meta dt{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--text-faint);
+}
+.notes-meta dd{
+  margin:6px 0 0;
+  font-size:0.92rem;
+  color:var(--text-dim);
+  line-height:1.6;
+}
+.notes-meta dd + dt{
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+}
+
+/* ---- previous / next ---- */
+.project-pager{
+  margin-top:72px;
+  padding-top:28px;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.project-pager a{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  max-width:45%;
+}
+.project-pager .pager-next{text-align:right;align-items:flex-end;}
+.pager-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:var(--text-faint);
+}
+.pager-title{
+  font-family:'Space Grotesk', sans-serif;
+  font-weight:600;
+  color:var(--text);
+}
+.project-pager a:hover .pager-title{color:var(--accent);}
+@media (max-width:560px){
+  .project-pager a{max-width:100%;}
+}

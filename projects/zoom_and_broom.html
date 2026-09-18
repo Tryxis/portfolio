@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Zoom and Broom — David Butterworth</title>
+<title>Zoom and Broom &mdash; David Butterworth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Zoom and Broom — .NET microservices application.">
+<meta name="description" content="Zoom and Broom — a car auction site split into .NET microservices with RabbitMQ messaging, running under Docker.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zoom and Broom — David Butterworth">
+<meta property="og:description" content="Zoom and Broom — a car auction site split into .NET microservices with RabbitMQ messaging, running under Docker.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/zoom-and-broom.svg">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/zoom_and_broom.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
 </head>
@@ -20,19 +27,19 @@
     <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#section-portfolio">Portfolio</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
       <li><a href="../index.html#section-resume">CV</a></li>
       <li><a href="../index.html#section-about">About</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
 <main id="project-main" class="project-hero">
   <div class="wrap project-grid">
     <div class="project-media">
-      <img src="../images/covers/zoom-and-broom.svg" alt="Zoom and Broom cover art">
+      <img src="../images/covers/zoom-and-broom.svg" alt="Zoom and Broom cover art" width="1400" height="875">
     </div>
     <div class="project-info">
       <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
@@ -43,11 +50,43 @@
         <span class="tag">API</span><span class="tag-status">In progress</span>
       </div>
       <div class="project-actions">
-        <a href="https://github.com/Tryxis/zoom-and-broom" class="btn btn-ghost" target="_blank" rel="noopener">View Repo</a>
+        <a href="https://github.com/Tryxis/zoom-and-broom" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Zoom and Broom (opens in a new tab)">View Repo</a>
       </div>
     </div>
   </div>
 </main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>Separate services, separate stores</h3>
+        <p>The auction service owns its data in Postgres; the search service keeps its own read-optimised copy in MongoDB. Each picks the database that suits its job instead of sharing one and pretending the services are independent.</p>
+        <h3>Kept in step by messages</h3>
+        <p>Auction created, updated and deleted events are published to RabbitMQ and consumed by search. The event contracts live in a shared project so both ends compile against the same definition and a breaking change fails the build rather than production.</p>
+        <h3>Identity as its own service</h3>
+        <p>Authentication is a service in its own right rather than a concern bolted onto each API, which is what makes adding the next service cheap.</p>
+        <h3>The whole stack comes up with one command</h3>
+        <p>Postgres, MongoDB and RabbitMQ are all declared in docker-compose, so a clean machine goes from checkout to running system without a setup document.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Stack</dt><dd>.NET 8, Next.js, RabbitMQ</dd>
+          <dt>Data</dt><dd>PostgreSQL + MongoDB</dd>
+          <dt>Identity</dt><dd>IdentityServer</dd>
+          <dt>Runs on</dt><dd>Docker Compose</dd>
+          <dt>Status</dt><dd>In progress</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./stock_flock.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Stock Flock</span></a>
+      <a class="pager-next" href="./bones_and_bolters.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Bones and Bolters</span></a>
+    </nav>
+  </div>
+</section>
 
 <footer>
   <div class="wrap footer-inner">

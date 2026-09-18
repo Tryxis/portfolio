@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Davey&#8217;s Dungeon Helper — David Butterworth</title>
+<title>Davey&#8217;s Dungeon Helper &mdash; David Butterworth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Davey&#8217;s Dungeon Helper — Node.js Discord bot.">
+<meta name="description" content="Davey's Dungeon Helper — a Discord bot for D&D 5e groups: dice rolling, spell lookup, conditions and rules reminders.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Davey&#8217;s Dungeon Helper — David Butterworth">
+<meta property="og:description" content="Davey's Dungeon Helper — a Discord bot for D&D 5e groups: dice rolling, spell lookup, conditions and rules reminders.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/dungeon-helper.svg">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/dungeon_helper.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
 </head>
@@ -20,35 +27,64 @@
     <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#section-portfolio">Portfolio</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
       <li><a href="../index.html#section-resume">CV</a></li>
       <li><a href="../index.html#section-about">About</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
 <main id="project-main" class="project-hero">
   <div class="wrap project-grid">
     <div class="project-media">
-      <img src="../images/covers/dungeon-helper.svg" alt="Davey&#8217;s Dungeon Helper cover art">
+      <img src="../images/covers/dungeon-helper.svg" alt="Davey&#8217;s Dungeon Helper cover art" width="1400" height="875">
     </div>
     <div class="project-info">
       <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
       <h1>Davey&#8217;s Dungeon Helper</h1>
       <p class="project-tagline">Node.js Discord bot</p>
-      <p class="project-description">A handy toolkit for Dungeons &amp; Dragons players, conveniently accessible within Discord. It currently handles dice-rolling commands &mdash; including commentary on certain rolls &mdash; and gives instant access to specific rules within just two prompts.</p>
+      <p class="project-description">A handy toolkit for Dungeons &amp; Dragons players, conveniently accessible within Discord. It handles dice-rolling commands &mdash; including commentary on certain rolls &mdash; and gives instant access to spells, conditions and rules within just two prompts.</p>
       <p class="project-description">It isn&#8217;t hosted outside of Discord at the moment, so it&#8217;s limited to servers it&#8217;s been added to. The repo has details on how to run it in your own server.</p>
       <div class="project-tags">
         <span class="tag">Bot</span>
       </div>
       <div class="project-actions">
-        <a href="https://github.com/Tryxis/Dungeon-Helper-Bot" class="btn btn-ghost" target="_blank" rel="noopener">View Repo</a>
+        <a href="https://github.com/Tryxis/Dungeon-Helper-Bot" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Davey&#8217;s Dungeon Helper (opens in a new tab)">View Repo</a>
       </div>
     </div>
   </div>
 </main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>Slash commands, not message parsing</h3>
+        <p>Everything is a registered slash command, so Discord does the argument validation and players get autocomplete and inline help without the bot needing permission to read message content.</p>
+        <h3>The reference data is local</h3>
+        <p>Spell text ships with the bot as JSON rather than being fetched from an API at request time. A table that has stopped mid-combat to wait on someone else&#8217;s rate limit is a table that stops using the bot.</p>
+        <h3>State that survives a restart</h3>
+        <p>The running counters are written back to disk, so a redeploy doesn&#8217;t quietly reset the numbers people have been building up all campaign.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Stack</dt><dd>Node.js, discord.js v14</dd>
+          <dt>Data</dt><dd>Local JSON spell reference</dd>
+          <dt>Hosting</dt><dd>Self-hosted per server</dd>
+          <dt>Status</dt><dd>Working, actively tinkered with</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./reckoner.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Reckoner</span></a>
+      <a class="pager-next" href="./delivery_davey.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Delivery Davey</span></a>
+    </nav>
+  </div>
+</section>
 
 <footer>
   <div class="wrap footer-inner">

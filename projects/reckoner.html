@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reckoner &mdash; David Butterworth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Reckoner — an offline-capable attack sequence probability calculator for tabletop wargames, installable as a phone app.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reckoner — David Butterworth">
+<meta property="og:description" content="Reckoner — an offline-capable attack sequence probability calculator for tabletop wargames, installable as a phone app.">
+<meta property="og:image" content="https://tryxis.github.io/portfolio/images/covers/reckoner.png">
+<meta property="og:url" content="https://tryxis.github.io/portfolio/projects/reckoner.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+<a href="#project-main" class="skip-link">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">david<span class="dot">.</span>butterworth</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#section-portfolio">Work</a></li>
+      <li><a href="../index.html#section-resume">CV</a></li>
+      <li><a href="../index.html#section-about">About</a></li>
+      <li><a href="../index.html#section-contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</nav>
+
+<main id="project-main" class="project-hero">
+  <div class="wrap project-grid">
+    <div class="project-media">
+      <img src="../images/covers/reckoner-wide.png" alt="The Reckoner calculator in dark mode, showing weapon and target inputs beside the calculated results" width="1400" height="875">
+    </div>
+    <div class="project-info">
+      <span class="project-back"><a href="../index.html#section-portfolio">&larr; Back to work</a></span>
+      <h1>Reckoner</h1>
+      <p class="project-tagline">Attack-sequence probability calculator</p>
+      <p class="project-description">Put in a weapon profile and a target, toggle the keywords in play, and Reckoner gives you the rolls you need, the damage you can expect, and how many models are likely to fall. It answers the question every wargamer asks mid-turn &mdash; <em>is this actually worth shooting at?</em> &mdash; faster than working it out on paper.</p>
+      <p class="project-description">It installs to a phone home screen and works with no signal, because the place you need it is a club table, not a desk.</p>
+      <div class="project-tags">
+        <span class="tag">App</span>
+      </div>
+      <div class="project-actions">
+        <a href="https://tryxis.github.io/Reckoner/" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Open app for Reckoner (opens in a new tab)">Open app</a>
+        <a href="https://github.com/Tryxis/Reckoner" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="View Repo for Reckoner (opens in a new tab)">View Repo</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="section project-notes" id="build-notes">
+  <div class="wrap">
+    <div class="notes-grid">
+      <div class="notes-main">
+        <h2>Build notes</h2>
+        <h3>Closed form where it can be, simulation where it can&#8217;t</h3>
+        <p>The hit &rarr; wound &rarr; save chain is solved algebraically, so those numbers are exact and instant. <em>Models slain</em> is not: damage spills across models, and rules like Feel No Pain and damage reduction interact awkwardly with that spill. So the app runs a Monte Carlo pass for the slain distribution and reports it as a probability spread rather than a single misleading average.</p>
+        <h3>Keywords as data, not branches</h3>
+        <p>Around forty keywords &mdash; Sustained Hits, Lethal Hits, Anti-X, Twin-linked, cover, Feel No Pain and the rest &mdash; are declared in one table, along with which of them are mutually exclusive and which carry a numeric value. Adding a new rule is an entry in that table rather than another branch through the maths.</p>
+        <h3>One folder, two products</h3>
+        <p>The <code>www/</code> folder is the entire app: four files, no dependencies, no build step. That is what lets the same folder be published to GitHub Pages by an Action <em>and</em> wrapped as an iOS or Android app with Capacitor, without a single line changing between them.</p>
+        <h3>Offline by design</h3>
+        <p>A service worker precaches every file and serves cache-first, so the app opens instantly and keeps working in a venue with no reception. The cache name is versioned, which is what makes an already-installed copy pick up a new release.</p>
+      </div>
+      <aside class="notes-meta" aria-label="Project details">
+        <dl>
+          <dt>Stack</dt><dd>Vanilla JavaScript, PWA (manifest + service worker), Capacitor</dd>
+          <dt>Deploy</dt><dd>GitHub Actions to GitHub Pages</dd>
+          <dt>Dependencies</dt><dd>None at runtime</dd>
+          <dt>Status</dt><dd>Live</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="project-pager" aria-label="Other projects">
+      <a class="pager-prev" href="./bones_and_bolters.html"><span class="pager-label">&larr; Previous</span><span class="pager-title">Bones and Bolters</span></a>
+      <a class="pager-next" href="./dungeon_helper.html"><span class="pager-label">Next &rarr;</span><span class="pager-title">Davey&#8217;s Dungeon Helper</span></a>
+    </nav>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 David Butterworth</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/david-butterworth-5b9950203/">LinkedIn</a>
+      <a href="https://github.com/Tryxis">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+
+<!-- 100% privacy-first analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+</body>
+</html>
